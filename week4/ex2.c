@@ -6,7 +6,7 @@
 #define loop 3
 
 int main(){
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < loop; i++)
     {
         fork();
     }

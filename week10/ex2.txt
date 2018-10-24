@@ -1,0 +1,2 @@
+/home/nikola/week01/file.txt
+/home/nikola/week10/_ex2.txt

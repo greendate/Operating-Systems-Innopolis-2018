@@ -1,0 +1,18 @@
+First example, without '\n' prints:
+" Hello
+  Hello
+
+	"
+
+In second example output is:
+" Hello
+
+
+
+	"
+
+In first code Hello is printed to unflushed buffer and after fork state is copied to child process
+and on the exit output buffers both
+With '\n' output is flushed before fork call
+
+

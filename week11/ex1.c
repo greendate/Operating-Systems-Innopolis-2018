@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <sys/mman.h>
 #include <memory.h>
+#include <unistd.h>
 
 int main() {
     int file = open("ex1.txt", O_RDWR);
@@ -21,6 +22,8 @@ int main() {
 
     off_t size_t = mystat.st_size;
 
+    ftruncate(file, 18);
+
     char* add = mmap(NULL, size_t, PROT_READ|PROT_WRITE, MAP_SHARED,
                    file, 0);
 
@@ -33,8 +36,6 @@ int main() {
     {
         add[i] = new[i];
     }
-
-    for(int i = strlen(new); i < strlen(add); i++) add[i] = ' '; // clean
 
     return (EXIT_SUCCESS);
 }

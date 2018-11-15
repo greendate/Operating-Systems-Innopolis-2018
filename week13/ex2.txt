@@ -1,0 +1,13 @@
+  When deadlock occurss very infrequently and data loss is little, we can ignore deadlocks. 
+
+  If we have information about the system resources and can identify situations where deadlock can occur, it is better to detect such 
+deadlocks and apply the recovery strategy.
+
+  If, in some case (a process asking for a busy resource), it's known beforehand that taking some action (e.g. granting resource to process)
+will definitely cause deadlock, it is better to avoid it by not approving the actions that lead to a deadlock.
+
+  However, deadlock avoidance is in practice impossible, because it requires information about future requests, which isn't known for many 
+real systems. 
+
+  It is better to use prevention strategy if we know that any of the above four conditions stated by Coffman
+et al. (1971) can be eliminated.
